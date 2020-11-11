@@ -1,0 +1,13 @@
+body {background-color:#becde3 ;}
+.HabitComponent {background-image: url(chillzuimages/heartundone.png); background-size: 95px 95px;background-repeat: no-repeat; height:95px; width:95px; display:inline-block;}
+.HabitComponentAlign { overflow:hidden}
+.Container {width:500px; margin: 0 auto}
+.FeelingComponent {display: inline-block ; margin: 10px ; background-color: white; padding: 10px ; border-radius: 8px }
+.bggreen {background-color:#77D36E ;}
+.bgblue {background-color: #A1A9EC ;}
+.bgmagenta {background-color: #EB4081 ;}
+.bgorange {background-color: #F2B786 ;} 
+.bggrey {background-color:#BDBAB7 ;} 
+.bgpurple {background-color:#C272DE ;} 
+.feelingSelected {border: 2px solid; border-color: whitesmoke;}
+.buttonDone {display: inline-block ; margin: 10px ; background-color: white; padding: 10px 90px; border-radius: 8px }
