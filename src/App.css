@@ -1,7 +1,5 @@
-body {background-color:#becde3 ;}
-.HabitComponent {background-image: url(chillzuimages/heartundone.png); background-size: 95px 95px;background-repeat: no-repeat; height:95px; width:95px; display:inline-block;}
-.HabitComponentAlign { overflow:hidden}
-.Container {width:500px; margin: 0 auto}
+body {background-color:#becde3 ; font-family: 'Nanum Gothic Coding', monospace; }
+.Container {width:500px; margin: 0 auto} /* margins */
 .FeelingComponent {display: inline-block ; margin: 10px ; background-color: white; padding: 10px ; border-radius: 8px }
 .bggreen {background-color:#77D36E ;}
 .bgblue {background-color: #A1A9EC ;}
@@ -11,3 +9,12 @@ body {background-color:#becde3 ;}
 .bgpurple {background-color:#C272DE ;} 
 .feelingSelected {border: 2px solid; border-color: whitesmoke;}
 .buttonDone {display: inline-block ; margin: 10px ; background-color: white; padding: 10px 90px; border-radius: 8px }
+/* HABIT COMPONENT STYLES*/
+.HabitComponent {background-image: url(chillzuimages/heartundone.png); background-size: 95px 95px;background-repeat: no-repeat; height:95px; width:95px; display:inline-block;}
+.HabitComponentAlign { overflow:hidden; width: 285px}
+.constantLog {padding: 0; margin: 0; margin-top: 19px;}
+.habitVariable {padding: 0; margin: 0;}
+.HabitComponentDone {background-image: url(chillzuimages/heartdone.png);}
+/* SETTING COMPONENT STYLES*/
+.SettingsLink {display: inline-block ; margin: 10px ; background-color: white; padding: 10px 90px;  text-decoration: none; color: black; }
+.SettingsLink:hover {background-color: #E9E6E0 ; }

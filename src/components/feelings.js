@@ -19,7 +19,7 @@ function Feelings() {
         </h2>
         <p>
         Please select the emotion that applied best to your whole day. 
-        </p>
+        </p>  
         <FeelingComponent feeling="happy" color="bggreen" selected= {activeFeeling === "happy" ? true : false} onClick={selectFeeling.bind(this,"happy")}></FeelingComponent>
         <FeelingComponent feeling="excited" color="bggreen" selected= {activeFeeling === "excited" ? true : false} onClick={selectFeeling.bind(this,"excited")}></FeelingComponent>
         <FeelingComponent feeling="confident" color="bggreen" selected= {activeFeeling === "confident" ? true : false} onClick={selectFeeling.bind(this,"confident")}></FeelingComponent>

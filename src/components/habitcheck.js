@@ -2,12 +2,14 @@
 import React from 'react';
 //import './App.css';
 
-function question() {
+function habitcheck() {
   return (
-    <div className="question">
+    <div className="habitcheck">
         have you completed x today?
+
+        <button type="button"> yes</button><button type="button">no</button>
     </div>
   );
 }
 
-export default question;
+export default habitcheck;
