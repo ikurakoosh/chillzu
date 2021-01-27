@@ -3,19 +3,29 @@ import React from 'react';
 import {
     Link,
   } from 'react-router-dom'
-function manageGoals() {
-    var savedGoal = [{id:"1", name:"goal 1"},{id:"2", name:"goal 2"},{id:"3", name:"goal 3"},{id:"4", name:"goal 4"}]
-    const goals = savedGoal.map((goal) =>
+function manageGoals(props) {
+
+    let localGoals = props.savedGoals
+    const goals = localGoals.map((goal) =>
       <div>
-        <input type="Text" value= {goal.name} ></input> <button type="button"> delete</button>
+        <input type="text" defaultValue= {goal.name} onChange={callOnChange}/><button type="button" onClick={callDelete}> delete</button>
       </div>
     );
-
+    function callOnChange() {
+     alert("cambiaste")
+    }
+  function callDelete() {
+    alert('delete this');
+  }
+  function callAddNew() {
+    alert('Add new. ');
+  }
   return (
+
     <div className="manageGoals">
         input ur goals
         {goals}
-        <button type="button"> add new</button>
+        <button type="button" onClick={callAddNew}> add new</button>
         <div>
         <Link to= "/Settings">back</Link>
         </div>

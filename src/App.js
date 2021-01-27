@@ -10,11 +10,13 @@ import Feelings from './components/feelings';
 import FollowUp from './components/follow-up';
 import Homescreen from './components/homescreen';
 import Settings from './components/settings';
-import manageGoals from './components/settings/managegoals';
+import ManageGoals from './components/settings/managegoals';
 import Habitcheck from './components/Habitcheck';
 
 function App() {
+   let  savedGoals = [{id:"1", name:"Read 10 min a day"},{id:"2", name:"goal 2"},{id:"3", name:"goal 3"},{id:"4", name:"goal 4"}]
   return (
+
     <div className= "Container">
       <center>
     <BrowserRouter>
@@ -27,7 +29,10 @@ function App() {
      <Route exact path="/FollowUp" component={FollowUp}></Route>
      <Route exact path="/Homescreen" component={Homescreen}></Route>
      <Route exact path="/Settings" component={Settings}></Route>
-     <Route exact path="/settings/managegoals" component={manageGoals}></Route>
+     <Route exact path="/settings/managegoals" render={(props) => (
+            <ManageGoals {...props} savedGoals={savedGoals} />
+        )}>
+    </Route>
      <Route exact path="/homescreen/habitcheck" component={Habitcheck}></Route>
      <Route exact path="*" component={Homescreen}></Route>
     </Switch>

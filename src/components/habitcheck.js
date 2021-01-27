@@ -4,7 +4,7 @@ import React from 'react';
 
 function Habitcheck() {
   return (
-    <div className="habitcheck">
+    <div className="Habitcheck">
         have you completed x today?
 
         <button type="button"> yes</button><button type="button">no</button>
