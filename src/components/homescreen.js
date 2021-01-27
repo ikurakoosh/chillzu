@@ -8,7 +8,7 @@ import {
 import WeekComponent from './weekcomponent';
 import HabitComponent from './habitcomponent';
 import Navigation from './navigation';
-import Habitcheck from './habitcheck';
+import Habitcheck from './Habitcheck';
 //var habits= ["skincare","hydration","diet","exercise","sleep","social"]
 
 var showHabitCheck = false
@@ -17,12 +17,14 @@ var savedHabit = [{id:"1", name:"x", done: true},{id:"2", name:"xx", done: false
 
 function Homescreen() { 
   const habits = savedHabit.map((habit) =>
-<HabitComponent habit={habit.name} done={habit.done} onClick={switchcomponent.bind(this,true)}></HabitComponent>
+<HabitComponent habit={habit.name} done={habit.done}></HabitComponent>
  );
- function switchcomponent(show){
-   alert(showHabitCheck)
-   showHabitCheck=show
+ /*function switchcomponent(show){
+  
+   showHabitCheck=show  
  }
+ */
+
   function showHabitCheckComponent(show) {
 
   if (show=== true){

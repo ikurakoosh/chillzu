@@ -2,7 +2,7 @@
 import React from 'react';
 //import './App.css';
 
-function habitcheck() {
+function Habitcheck() {
   return (
     <div className="habitcheck">
         have you completed x today?
@@ -12,4 +12,4 @@ function habitcheck() {
   );
 }
 
-export default habitcheck;
+export default Habitcheck;

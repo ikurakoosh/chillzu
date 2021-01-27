@@ -11,6 +11,7 @@ import FollowUp from './components/follow-up';
 import Homescreen from './components/homescreen';
 import Settings from './components/settings';
 import manageGoals from './components/settings/managegoals';
+import Habitcheck from './components/Habitcheck';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
      <Route exact path="/Homescreen" component={Homescreen}></Route>
      <Route exact path="/Settings" component={Settings}></Route>
      <Route exact path="/settings/managegoals" component={manageGoals}></Route>
+     <Route exact path="/homescreen/habitcheck" component={Habitcheck}></Route>
      <Route exact path="*" component={Homescreen}></Route>
     </Switch>
  </BrowserRouter>
