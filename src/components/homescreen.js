@@ -12,11 +12,12 @@ import Habitcheck from './Habitcheck';
 //var habits= ["skincare","hydration","diet","exercise","sleep","social"]
 
 var showHabitCheck = false
-var savedHabit = [{id:"1", name:"x", done: true},{id:"2", name:"xx", done: false},{id:"3", name:"xxx", done: true},{id:"4", name:"xxxx", done: false},{id:"5", name:"xxxxx", done: true}]
+//var savedHabit = [{id:"1", name:"x", done: true},{id:"2", name:"xx", done: false},{id:"3", name:"xxx", done: true},{id:"4", name:"xxxx", done: false},{id:"5", name:"xxxxx", done: true}]
 
 
-function Homescreen() { 
-  const habits = savedHabit.map((habit) =>
+function Homescreen(props) { 
+  let localGoals = props.savedGoals
+  const habits = localGoals.map((habit) =>
 <HabitComponent habit={habit.name} done={habit.done}></HabitComponent>
  );
  /*function switchcomponent(show){

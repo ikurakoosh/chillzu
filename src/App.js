@@ -14,7 +14,10 @@ import ManageGoals from './components/settings/managegoals';
 import Habitcheck from './components/Habitcheck';
 
 function App() {
-   let  savedGoals = [{id:"1", name:"Read 10 min a day"},{id:"2", name:"goal 2"},{id:"3", name:"goal 3"},{id:"4", name:"goal 4"}]
+   let  savedGoals = [{id:"1", name:"Reading", done: true},
+   {id:"2", name:"goal 2", done: true},
+   {id:"3", name:"goal 3", done: true},
+   {id:"4", name:"goal 4", done: true}]
   return (
 
     <div className= "Container">
@@ -27,7 +30,10 @@ function App() {
      <Route exact path="/Calendar" component={Calendar}></Route>
      <Route exact path="/Feelings" component={Feelings}></Route>
      <Route exact path="/FollowUp" component={FollowUp}></Route>
-     <Route exact path="/Homescreen" component={Homescreen}></Route>
+     <Route exact path="/Homescreen" render={(props) => (
+            <Homescreen {...props} savedGoals={savedGoals} />
+        )}>
+     </Route>
      <Route exact path="/Settings" component={Settings}></Route>
      <Route exact path="/settings/managegoals" render={(props) => (
             <ManageGoals {...props} savedGoals={savedGoals} />
