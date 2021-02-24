@@ -10,21 +10,18 @@ import Feelings from './components/feelings';
 import FollowUp from './components/follow-up';
 import Homescreen from './components/homescreen';
 import Settings from './components/settings';
-import ManageGoals from './components/settings/managegoals';
+import ManageGoals from './components/settings/Managegoals';
 import Habitcheck from './components/Habitcheck';
 import NotFound from './components/NotFound';
 
 class App extends React.Component{
   constructor(props){
-    super(props)
-    let savedGoals = [{id:"1", name:"Reading", done: true},
-    {id:"2", name:"goal 2", done: true},
-    {id:"3", name:"goal 3", done: true},
-    {id:"4", name:"goal 4", done: true}]
+    super(props);
   }
-  render(){
-    return (
 
+  render(){
+    //let  user = {username:"Ikurakoosh", name:"Bella"}
+    return (
       <div className= "Container">
         <center>
       <BrowserRouter>
@@ -35,20 +32,11 @@ class App extends React.Component{
        <Route exact path="/Calendar" component={Calendar}></Route>
        <Route exact path="/Feelings" component={Feelings}></Route>
        <Route exact path="/FollowUp" component={FollowUp}></Route>
-       <Route exact path="/Homescreen" render={(props) => (
-              <Homescreen {...props} savedGoals={this.savedGoals} />
-          )}>
-       </Route>
+       <Route exact path="/Homescreen" component={Homescreen}></Route>
        <Route exact path="/Settings" component={Settings}></Route>
-       <Route exact path="/settings/managegoals" render={(props) => (
-              <ManageGoals {...props} savedGoals={this.savedGoals} />
-          )}>
-      </Route>
+       <Route exact path="/settings/managegoals" component={ManageGoals}></Route>
        <Route exact path="/homescreen/habitcheck" component={Habitcheck}></Route>
-       <Route exact path="/" render={(props) => (
-              <Homescreen {...props} savedGoals={this.savedGoals} />
-          )}>
-       </Route>
+       <Route exact path="/" component={Homescreen}></Route>
        <Route exact path="*" component={NotFound}></Route>
       </Switch>
    </BrowserRouter>
