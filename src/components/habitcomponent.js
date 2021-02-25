@@ -9,11 +9,12 @@ import {
 function HabitComponent(props) {
   let history = useHistory();
   var activeClass ='';
-if (props.done=== true) {
+/*if (props.done=== true) {
   activeClass= "HabitComponentDone"
 } else {
   activeClass= ""
 }
+*/
 
 function gotoHabitcheck() {
 

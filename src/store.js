@@ -1,7 +1,7 @@
 // store.js
 import React, {createContext, useReducer} from 'react';
 
-const initialState = { habits: [{id:"1", name:"skincare"},{id:"2", name:"goal 2"},{id:"3", name:"goal 3"},{id:"4", name:"goal 4"}]};
+const initialState = { habits: [{id:"1", name:"skincare", completed: false},{id:"2", name:"goal 2", completed: false},{id:"3", name:"goal 3", completed: false},{id:"4", name:"goal 4", completed: false}]};
 
 const store = createContext(initialState);
 const { Provider } = store;
@@ -17,6 +17,9 @@ const StateProvider = ( { children } ) => {
         newState.habits.splice(action.HabitIndex, 1)
         console.log(newState.habits)
         return newState;
+        case 'completed':
+          newState.habits[action.HabitIndex].completed = true
+          return newState;
       default:
         throw new Error();
     };

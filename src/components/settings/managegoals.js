@@ -23,7 +23,7 @@ function ManageGoals() {
     const goalIndex = event.target.dataset.index
     dispatch({type: 'deleteHabit', HabitIndex: goalIndex});
     goals = <div>hola</div>
-    forceUpdate();
+    
   }
   function callAddNew() {
     alert('Add new. ');
