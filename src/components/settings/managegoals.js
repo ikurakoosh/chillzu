@@ -15,21 +15,29 @@ function ManageGoals() {
      dispatch({type: 'updateHabit', HabitIndex: goalIndex, HabitValue: goalValue})
     }
   function callDelete(index) {
-    alert(index)
     dispatch({type: 'deleteHabit', HabitIndex: index});
     setGoals([...MyStore.state.habits])
     
   }
   function callAddNew() {
-    alert('Add new. ');
+    if (goals.length < 6) {
+      dispatch({type: 'addHabit'});
+      setGoals([...MyStore.state.habits])
+    }
+    else {
+      alert("You've reached your goal limit. ")
+    }
   }
   return (
     <div className="manageGoals">
         input ur goals
         {
           goals.map((goal, index) => (
-            <div><input type="text" defaultValue= {goal.name} data-index = {index} onChange={callOnChange}/><button type="button" onClick={()=>callDelete(index)}> delete</button></div>
-          ))
+            <div>
+              <input type="text" defaultValue= {goal.name} data-index = {index} onChange={callOnChange} maxLength = "10" />
+              <button type="button" onClick={()=>callDelete(index)}> delete</button>
+              </div>
+            ))
         }
         <button type="button" onClick={callAddNew}> add new</button>
         <div>

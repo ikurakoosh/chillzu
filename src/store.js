@@ -15,8 +15,10 @@ const StateProvider = ( { children } ) => {
         return newState;
         case 'deleteHabit':
         newState.habits.splice(action.HabitIndex, 1)
-        console.log(newState.habits)
         return newState;
+        case 'addHabit':
+          newState.habits.push({id: newState.habits.length, name: "", completed: false})
+          return newState;
         case 'completed':
           newState.habits[action.HabitIndex].completed = true
           return newState;

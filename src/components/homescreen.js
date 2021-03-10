@@ -26,7 +26,7 @@ function Homescreen() {
   function showHabitCheckComponent(show) {
 
   if (show=== true){
-    return <Habitcheck></Habitcheck> 
+    return <Habitcheck habitID = "1" ></Habitcheck> 
   } else {
     return <div></div>
   }
