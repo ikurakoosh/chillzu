@@ -18,7 +18,7 @@ function HabitComponent(props) {
 
 function gotoHabitcheck() {
 
-  history.push("/homescreen/Habitcheck")
+  history.push("/homescreen/Habitcheck/" + props.habitID)
 }
   return (
     <div className={'HabitComponent' + ' ' + activeClass} onClick={gotoHabitcheck}>

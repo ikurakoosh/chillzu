@@ -35,7 +35,7 @@ class App extends React.Component{
        <Route exact path="/Homescreen" component={Homescreen}></Route>
        <Route exact path="/Settings" component={Settings}></Route>
        <Route exact path="/settings/managegoals" component={ManageGoals}></Route>
-       <Route exact path="/homescreen/habitcheck" component={Habitcheck}></Route>
+       <Route exact path="/homescreen/habitcheck/:id" component={Habitcheck}></Route>
        <Route exact path="/" component={Homescreen}></Route>
        <Route exact path="*" component={NotFound}></Route>
       </Switch>

@@ -19,14 +19,14 @@ var showHabitCheck = false
 function Homescreen() { 
   const MyVariables = useContext(store);
   const habits = MyVariables.state.habits.map((habit) =>
-<HabitComponent habit={habit.name} done={habit.done}
+<HabitComponent habit={habit.name} completed={habit.completed} habitID = {habit.id}
   key = {habit.id}></HabitComponent>
  );
  
   function showHabitCheckComponent(show) {
 
   if (show=== true){
-    return <Habitcheck habitID = "1" ></Habitcheck> 
+    return <Habitcheck habitID = "1"></Habitcheck> 
   } else {
     return <div></div>
   }
