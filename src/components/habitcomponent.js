@@ -9,12 +9,13 @@ import {
 function HabitComponent(props) {
   let history = useHistory();
   var activeClass ='';
-/*if (props.done=== true) {
+  console.log(props)
+
+if (props.completed === true) {
   activeClass= "HabitComponentDone"
 } else {
   activeClass= ""
 }
-*/
 
 function gotoHabitcheck() {
 
@@ -24,7 +25,7 @@ function gotoHabitcheck() {
     <div className={'HabitComponent' + ' ' + activeClass} onClick={gotoHabitcheck}>
      <p className= "constantLog">log</p>
      <p className= "habitVariable">{props.habit}</p>
-     <p className = "habitDone">{props.done}</p>
+     <p className = "habitDone">{props.completed}</p>
     </div>
 
   );

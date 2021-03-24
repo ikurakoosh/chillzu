@@ -16,18 +16,23 @@ function Habitcheck(props) {
   })
 
   function selectedYes (){
-    // to do: mark as completed
+    dispatch({type: 'completed', habitID: id});
     history.push("/homescreen")
   }
   function selectedNo (){
+    dispatch({type: 'reset', habitID: id});
     history.push("/homescreen")
   }
   return (
     <div className="Habitcheck">
-        have you completed {myGoal[0].name} today?
+        have you completed your {myGoal[0].name} today?
 
         <button type="button" onClick={selectedYes}> yes</button>
         <button type="button" onClick={selectedNo}>no</button>
+<p></p>
+        your {myGoal[0].name} goal includes: 
+        <p></p>
+        {myGoal[0].description}
         
     </div>
   );
