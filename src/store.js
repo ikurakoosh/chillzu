@@ -10,7 +10,7 @@ const initialState = { habits: [{id:"1", name:"skincare", completed: false, desc
 
 const store = createContext(initialState);
 const { Provider } = store;
-
+ 
 const StateProvider = ( { children } ) => {
   const [state, dispatch] = useReducer((state, action) => {
     let newState = initialState;
